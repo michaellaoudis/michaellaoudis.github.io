@@ -1,0 +1,687 @@
+:root{
+    --mainColor:#eaeaea;                      /*gray*/
+    --secondaryColor:#fff;                    /*white*/
+    
+    --manPageColor: #232323;
+    --man_H1_Color: #2c2c2c;
+    --man_H2_Color: #373737;
+
+    --borderColor:#c1c1c1;
+    --manBorderColor: #232323;                    
+
+    --mainText:black;                         /*color for headers and bold tags*/
+    --secondaryText:#4b5156;
+    --manText: #fff;
+    
+    --themeDotBorder: #24292e;
+
+    --previewBg:rgb(251, 249, 243, 0.8);
+    --previewShadow:#f0ead6;
+}
+
+html, body{
+    padding: 0;                                 /*no padding or margins*/
+    margin: 0;
+}
+
+body *{                                        /*include all child elements*/
+    transition: 0.5s;                          /*delay theme color changes by .3s*/
+}
+
+h1, h2, h3, h4, h5, h6, strong{                 /*sets all larger text to black, Red Hat Mono style*/
+    color: var(--mainText);
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 500;    
+}
+
+p, li, span, label, input, textarea{            /*set to lighter color for visibility, Roboto Mono style*/
+    color: var(--secondaryText);
+    font-family: 'Roboto Mono', monospace;
+}
+
+a{                                              /*links light blue*/
+    text-decoration: underline;
+    color:#17a2b8;
+}
+
+u1{                                             /*Lists for navigation w/o bullets*/
+    list-style: none;
+}
+
+h1 { font-size: 56px;}
+h2 { font-size: 36px;}
+h3 { font-size: 28px;}
+h4 { font-size: 24px;}
+h5 { font-size: 20px;}
+h6 { font-size: 16px;}
+
+
+.s1{                                            /*Set s1 container white background*/
+    background-color: var(--mainColor);
+    border-bottom:1px solid var(--borderColor);
+    overflow:auto;
+}
+
+.s2{                                            /*Set s2 container gray background*/
+    background-color: var(--secondaryColor);
+    border-bottom:1px solid var(--borderColor);
+    overflow:auto;
+}
+
+.main-container{                                /*center all contents on page*/
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.greeting-wrapper{                              /*Turn greeting into grid */
+    display: grid;
+    
+    text-align:center;
+    justify-content: center;                    /*Align on x-axis*/
+    align-content: center;                      /*Align on y-axis*/
+    min-height: 10em;
+
+}
+
+.intro-wrapper{
+    background-color: var(--secondaryColor);    /*set white*/
+    border: 1px solid var(--borderColor);       /*set gray*/
+    border-radius: 5px 5px 0 0;                 /*curve edges top of top header only*/
+
+
+    -webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+
+    display: grid;                              /*make into grid area*/
+    grid-template-columns: 1fr 1fr;             /*2 columns, both taking 1 fraction*/
+    grid-template-areas: 
+        'nav-wrapper nav-wrapper'               /*Nav aligned on its own x axis*/
+        'left-column right-column'              /*left/right columns side by side*/
+    ;
+}
+
+.nav-wrapper{                                    /*---Border---*/
+    border-radius: 5px 5px 0 0;                  /*curve edges top of top header only*/
+    grid-area: nav-wrapper;
+    border-bottom: 1px solid var(--borderColor); /*solid line bottom of Nav*/
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));  /*repeat this action -- autofit as many columns as we can into this row*/
+    display: grid;
+    grid-template-areas:
+        'heading-wrapper date-intro navigation'
+    ;
+
+    justify-content: space-between;              /*Push 'Navs' one farthest left and one farthest right */
+    align-items: baseline;                           /*Center 'Navs' x-axis*/
+    background-color: var(--mainColor);          /*Background color where buttons are; made gray*/
+
+
+
+
+}
+
+
+#navigation a{                                  /*'Contact' top right of page changes with chosen theme*/
+    color:var(--mainText);
+}
+
+#navigation{                                   /*unordered list right-side intro header icons*/
+    margin: 0px;
+    padding: 10px;
+    display: flex;
+    justify-content: right;
+}
+
+#activities-intro{                        /*'Activities' next to redhat logo in header*/
+    color:var(--mainText);
+    padding-left: 12px;
+    margin: 0px;
+    text-align:left;
+    align-items: baseline;
+}
+
+#terminal-icon{
+    color:var(--mainText);
+    margin: 0;
+    height:17px;
+    width:17px;
+    padding-left: 8px;
+    padding-right: 5px;
+    padding-top: 10px;
+    display: auto;
+    align-items: center;
+}
+
+#date-intro{
+    margin: 0px;
+    color:var(--mainText);
+    display: grid;
+    justify-content: center;
+    align-items: baseline;
+    font-size: 18px;
+}
+
+#speaker-icon{                                 /*Speaker icon intro header*/
+    height:15px;
+    width:15px;
+    margin: 0px;
+    padding-right: 6px;
+}
+
+#power-button{                                 /*Power icon intro header*/
+    color:var(--mainText);
+    height:15px;
+    width:15px;
+    margin: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#downward-arrow{                               /*Downward Arrow intro header*/
+    color: var(--mainText);
+    height:15px;
+    width:15px;
+    margin: 0px;
+    padding-left: 5px;
+}
+
+#navigation li{
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.left-column{                                     /*Profile pic, personalize theme, theme buttons*/
+    grid-area: left-column;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#profile_pic{                                      /*Profile pic dimensions*/
+    display:block;
+    margin: 0 auto;
+
+    height: 350px;
+    width: 200px;
+    object-fit: cover;
+    border: 2px solid var(--borderColor);
+}
+
+#theme-options-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.theme-dot{
+    height: 30px;
+    width: 30px;
+    background-color: black;
+    border-radius: 50%;
+
+    margin: 5px;
+    border: 2px solid var(--themeDotBorder);
+
+    -webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+
+    cursor: pointer;                                             /*hover effect: cursor turns into pointer*/
+}
+
+
+                                                /*PAGE COLOR MODES*/
+.theme-dot:hover{
+    border-width: 5px;
+}
+
+#light-mode{
+    background-color: #fff;
+}
+
+#blue-mode{
+    background-color: #192734;
+}
+
+#green-mode{
+    background-color: #78866b;
+}
+
+#purple-mode{
+    background-color: #7E4C74;
+}
+
+#settings-note{
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
+}
+
+.right-column{                                                 /*center 'What I Do' box*/
+    grid-area: right-column;
+    display:grid;
+    align-content:center;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#preview-shadow{                                              /*shadow behind 'What I Do' box*/
+    background-color: var(--previewShadow);
+    width: 280px;
+    height: 150px;
+    padding: 30px;
+    padding-top: 30px;
+    
+}
+
+#preview{
+    width: 300px;
+    border:1.5px solid #17a2b8;
+    background-color: var(--previewBg);
+    padding:15px;
+    position: relative;                                        /*contain & set absolute positioning inside parent 'What I Do' box*/
+}
+
+.corner{
+    width:7px;
+    height: 7px;
+    border-radius: 50%;
+    border:1.5px solid #17a2b8;
+    background-color: #fff;
+    position: absolute;                                         /*fixate corner dots onto 'What I Do' box*/
+}
+
+                       /*Fixate dots onto 'What I Do' box corners*/
+#corner-tl{
+    top:-5px;
+    left:-5px;
+}
+
+#corner-tr{
+    top:-5px;
+    right:-5px;
+}
+
+#corner-br{
+    bottom:-5px;
+    right:-5px;
+}
+
+#corner-bl{
+    bottom:-5px;
+    left:-5px;
+}
+
+.intro-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));  /*repeat this action -- autofit as many columns as we can into this row*/
+    gap: 100px;
+}
+
+.heading-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));  /*repeat this action -- autofit as many columns as we can into this row*/
+    gap: 100px;
+    justify-content: center;
+    text-align: center;
+} 
+
+.about-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));  /*repeat this action -- autofit as many columns as we can into this row*/
+    padding-bottom: 50px;
+    padding-top: 50px;
+    gap: 100px;
+} 
+ 
+
+
+#skills{
+    display: flex;                                               /*used flex for simple alignment*/
+    justify-content: space-evenly;
+    background-color: var(--previewShadow);
+}
+
+.social-links{                                                  /*center social link class content*/
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+
+#social_img{                                                     /*RedHat icon in 'More about me'*/
+    width: 100%;
+    padding-left: 500px;
+}
+
+.post-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 320px);              /*Fit as many columns as possible, never let it go above/below than 320px*/
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.post{                                                           /*Border & Shadow for video postings*/
+    padding-top: 90px;
+}
+
+.post-preview{                                                   /*White background*/
+    background-color: #fff;
+    padding:15px;
+}
+
+.thumbnail{
+    display: block;
+    width: 100%;
+    height:300px;
+    object-fit: cover;                                          /*fix image distortion*/
+    padding-right: 100px;
+}
+
+.post-title{                                                    
+    color:black;                                             /*Set video post title to black for when user changes page colors*/
+    font-size: 26px;
+    margin: 0;
+}
+
+.post-intro{
+    color: #4b4b4b;
+    font-size: 14px;
+}
+
+/*---------------Competency Sections Below---------------*/
+
+.man-workstation-wrapper{                                    /*---Border---*/
+    border-radius: 5px 5px 0 0;                  /*curve edges top of top header only*/
+    grid-area: man-workstation-wrapper;
+    border-top: 2px solid var(--manBorderColor);
+    border-right: 2px solid var(--manBorderColor);
+    border-left: 2px solid var(--manBorderColor);
+    border-bottom: 5px solid var(--manBorderColor); /*solid line bottom of Nav*/
+    display: flex;                               
+    justify-content: center;              
+    align-items: baseline;                           /*Center x-axis*/
+    background-color: var(--man_H1_Color);          /*Background color where buttons are; made gray*/
+}
+
+.man-nav-wrapper{                                    /*---Border---*/
+    border-radius: 0px 0px 0 0;                  /*curve edges top of top header only*/
+    grid-area: man-nav-wrapper;
+    border-right: 2px solid var(--manBorderColor);
+    border-left: 2px solid var(--manBorderColor);
+    border-bottom: 1px solid var(--manBorderColor); /*solid line bottom of Nav*/
+    display: flex;                               /*Move two 'Navs' from top under -> side by side */
+    justify-content: left;              /*Push 'Navs' one farthest left and one farthest right */
+    align-items: baseline;                           /*Center 'Navs' x-axis*/
+    background-color: var(--man_H2_Color);          /*Background color where buttons are; made gray*/
+}
+
+.man-window{
+    padding-bottom: 100px;
+}
+
+
+/*-----Format man header text-----*/
+
+#mlaoudis-workstation{                        /*'Activities' next to redhat logo in header*/
+    color:var(--manText);
+    align-items: baseline;
+    font-size: 22px;
+}
+
+#man-header-toolbar{                        /*'Activities' next to redhat logo in header*/
+    color:var(--manText);
+    padding-left: 10px;
+    margin: 8px;
+    text-align:left;
+    align-items: baseline;
+    font-size: 18px;
+}
+
+
+
+/*Man page contents*/
+
+.man-header{
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));  /*repeat this action -- autofit as many columns as we can into this row*/
+    border-right: 2px solid var(--manBorderColor);
+    border-left: 2px solid var(--manBorderColor);
+    grid-area: man-header;
+    justify-content: space-between;              /*Push 'Navs' one farthest left and one farthest right */
+    background-color: var(--manPageColor);          
+    padding-bottom: 50px;
+    display: grid;                              /*make into grid area*/
+    grid-template-columns: auto auto auto;             /*3 columns*/
+    grid-template-areas: 
+        'man-header1 man-header2 man-header3'               /*Nav aligned on its own x axis*/
+    ;
+}
+
+#man-header-col1{
+    text-align: top;
+    color:var(--manText);
+    padding-left: 5px;
+    margin-top: 2px;
+}
+
+#man-header-col2{
+    color:var(--manText);
+    margin-top: 2px;
+}
+
+#man-header-col3{
+    color:var(--manText);
+    padding-right: 5px;
+    margin-top: 2px;
+}
+
+.man-contents{
+    display: grid;
+    justify-content: left;
+    color:var(--manText);
+}
+
+#man-name-title{
+    color: var(--manText);
+    font-size: 25px;
+    margin-bottom: 0px;
+}
+
+#man-name-text{
+    color: var(--manText);
+    padding-left: 150px;
+    white-space: normal;
+    text-overflow:ellipsis;
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#man-description-text{
+    color: var(--manText);
+    padding-left: 150px;
+    font-size: 20px;
+}
+
+#man-ts1{
+    color: var(--manText);
+    padding-left: 150px;
+    font-size: 20px;
+}
+
+#man-ts2{
+    color: var(--manText);
+    padding-left: 150px;
+    font-size: 20px;
+}
+
+#man-ts3{
+    color: var(--manText);
+    padding-left: 150px;
+    font-size: 20px;
+}
+
+#man-ts4{
+    color: var(--manText);
+    padding-left: 150px;
+    font-size: 20px;
+}
+
+#man-ts5{
+    color: var(--manText);
+    padding-left: 150px;
+    font-size: 20px;
+}
+
+#man-ts6{
+    color: var(--manText);
+    padding-left: 150px;
+    font-size: 20px;
+}
+
+#man-ts7{
+    color: var(--manText);
+    padding-left: 150px;
+    font-size: 20px;
+}
+
+#man-ts8{
+    color: var(--manText);
+    padding-left: 150px;
+    font-size: 20px;
+}
+
+#man-ts9{
+    color: var(--manText);
+    padding-left: 150px;
+    font-size: 20px;
+}
+
+
+#man-description-title{
+    color: var(--manText);
+    font-size: 25px;
+    margin-bottom: 0px;
+}
+
+#man-timestamps-title{
+    color: var(--manText);
+    font-size: 25px;
+    margin-bottom: 0px;
+}
+
+#man-timestamps{
+    color: var(--manText);
+}
+
+#man-video-title{
+    color: var(--manText);
+    font-size: 25px;
+}
+
+#man-video{
+    height: 300px;
+    padding-right: 200px;
+}
+
+.man-contents-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 320px);              /*Fit as many columns as possible, never let it go above/below than 320px*/
+    text-align: left;
+    border-right: 2px solid var(--manBorderColor);
+    border-left: 2px solid var(--manBorderColor);
+    border-bottom: 1px solid var(--manBorderColor);
+    padding-left: 5px;
+ 
+    background-color: var(--manPageColor);
+}
+
+/*man video*/
+.man-post-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 320px);              /*Fit as many columns as possible, never let it go above/below than 320px*/
+    gap:20px;                                                     /*Gap between video postings*/
+    justify-content: auto;
+    padding-bottom: 50px;
+    padding-left: 150px;
+    padding-right: 100px;
+    margin-right: 50px;
+    margin-bottom: 0;
+}
+
+.man-thumbnail{
+    display: grid;
+    padding-left: 70px;
+    width: 500px;
+    height:300px;
+    object-fit: cover;                                          /*fix image distortion*/
+}
+
+.mmm{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+}
+
+#doc-click{
+    color:#17a2b8;
+    text-decoration: underline;
+    padding-bottom: 0;
+    margin-top: 0;
+}
+
+/*Credits*/
+
+
+
+/*-----Contents Resize with Window Size-----*/
+
+
+
+@media screen and (max-width: 1200px){                           /*page contents adjust with screen size, esp for mobile*/
+        .main-container{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 800px){                           /*page contents adjust with screen size, esp for mobile*/
+    .intro-wrapper{
+       
+        grid-template-columns: 1fr;             /*whenever reach this size, make 1 column*/
+        grid-template-areas: 
+            'nav-wrapper'               /*stack nav, left, right columns as shown*/
+            'left-column'
+            'right-column'              
+        ;
+    }
+
+    .right-column{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 800px){
+
+    .about-wrapper{
+       
+        grid-template-columns: 1fr;             /*whenever reach this size, make 1 column*/
+        grid-template-areas: 
+            'about-me'               /*stack nav, left, right columns as shown*/
+            'post'              
+        ;
+    }
+}
+
+@media screen and (max-width: 800px){
+
+    .man-window{
+       
+        grid-template-columns: 1fr;             /*whenever reach this size, make 1 column*/
+        grid-template-areas: 
+            'greeting-wrapper'               /*stack nav, left, right columns as shown*/
+            'man-workstation-wrapper'
+            'man-nav-wrapper'
+            'man-header'
+            'man-contents-wrapper' 
+        ;
+    }
+}

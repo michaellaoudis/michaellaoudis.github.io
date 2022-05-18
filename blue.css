@@ -1,0 +1,14 @@
+:root{
+    --mainColor:#15202B;                      /*Dark Navy Blue*/
+    --secondaryColor: #192734;                    
+
+    --borderColor: #164D56;                    
+
+    --mainText: #fff;                         /*white -> color for headers and bold tags*/
+    --secondaryText: #eeeeee;                 /*darker white*/
+    
+    --themeDotBorder: #FFF;                  /*White -> color around theme color buttons*/
+
+    --previewBg:rgb(25, 39, 52, 0.8);
+    --previewShadow: #111921;
+}
