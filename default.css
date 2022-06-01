@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5, h6, strong{                 /*sets all larger text to black,
     font-weight: 500;    
 }
 
-p, li, span, label, input, textarea{            /*set to lighter color for visibility, Roboto Mono style*/
+p, pre, li, span, label, input, textarea{            /*set to lighter color for visibility, Roboto Mono style*/
     color: var(--secondaryText);
     font-family: 'Roboto Mono', monospace;
 }
@@ -342,6 +342,8 @@ h6 { font-size: 16px;}
     background-color: var(--previewShadow);
 }
 
+
+
 .social-links{                                                  /*center social link class content*/
     display: grid;
     justify-content: center;
@@ -353,20 +355,15 @@ h6 { font-size: 16px;}
     padding-left: 500px;
 }
 
+.post{
+    padding-top: 50px;
+}
+
 .post-wrapper{
     display: grid;
     grid-template-columns: repeat(auto-fit, 320px);              /*Fit as many columns as possible, never let it go above/below than 320px*/
     justify-content: center;
     padding-bottom: 50px;
-}
-
-.post{                                                           /*Border & Shadow for video postings*/
-    padding-top: 90px;
-}
-
-.post-preview{                                                   /*White background*/
-    background-color: #fff;
-    padding:15px;
 }
 
 .thumbnail{
@@ -381,6 +378,7 @@ h6 { font-size: 16px;}
     color:black;                                             /*Set video post title to black for when user changes page colors*/
     font-size: 26px;
     margin: 0;
+    padding-bottom: 10px;
 }
 
 .post-intro{
