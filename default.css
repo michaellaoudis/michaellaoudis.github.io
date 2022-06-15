@@ -31,12 +31,14 @@ body *{                                        /*include all child elements*/
 h1, h2, h3, h4, h5, h6, strong{                 /*sets all larger text to black, Red Hat Mono style*/
     color: var(--mainText);
     font-family: 'Red Hat Display', sans-serif;
-    font-weight: 500;    
+    font-weight: 500;
+    user-select: none;
 }
 
 p, pre, li, span, label, input, textarea{            /*set to lighter color for visibility, Roboto Mono style*/
     color: var(--secondaryText);
     font-family: 'Roboto Mono', monospace;
+    user-select: none;
 }
 
 a{                                              /*links light blue*/
