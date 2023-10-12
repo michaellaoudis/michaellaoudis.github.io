@@ -2,13 +2,13 @@
 
 # Overview
 
-Here you can gain insight into my background and some of the things I've been working on.
+Here you can gain insight into my professional background and technical skills.
 
-This project started as an idea to showcase the subjects I've studied while completing my AAS in Information Security. Throughout the process, I've not only developed technical skills with HTML/CSS/JS, but continued to update this website as my portfolio grows over time.  
+This project stemmed from my college education having studied hands-on application of Information Security. Building this web page from scratch motivated me to learn HTML/CSS/JS and continously add to it as my portfolio grows.  
 <br>
 
 # How I Got Started
 
-My passion for the field of IT began in adolescence when I started using my personal computer as a server to host various online games for my friends and I. At that time, I became fascinated with learning how networking, computer hardware, and software worked together so that I could better provide a seamless experience for my colleagues to enjoy. Through self-studying and tinkering, I quickly became aware of the security risks that threatened my computer being public on the Internet. This is what introduced me to the field of cyber-security, as I wanted to learn how to protect my friends and I from malicious actors.
+My passion for the field of IT began in adolescence when I used my personal computer as a server to host various online games for my colleagues. At that time, I became fascinated with learning how networking, computer hardware, and software could be used to better provide a seamless experience for entertainment. Through self-studying and tinkering, I quickly became aware of the security risks that threatened my computer being public on the Internet. This is what introduced me to the field of cyber-security, as I wanted to learn how to better protect myself from malicious actors on the Internet.
 
-After completing my AAS degree in Information Security and becoming Security+ certified with CompTIA, my career goals shifted from practicing defensive security to offensive. Reaching into the mind of a malicious hacker to understand how systems and information become comrpomised intrigued me the most. Most recently, I have been practicing hands-on ethical hacking through bug bounties and lab environments on TryHackMe and PortSwigger's Web Security Academy.
+After completing my AAS degree in Information Security and becoming Security+ certified with CompTIA, my career interests shifted from practicing defensive security to offensive. Reaching into the mind of a malicious hacker to understand how systems and information become compromised intrigued me the most. This is what lead me to start hunting for vulnerabilities in live websites on the HackerOne platform. As I continue to build my technical skills and portfolio, I continue to perform security testing through vulnerable lab environments on TryHackMe and PortSwigger's Web Security Academy.
