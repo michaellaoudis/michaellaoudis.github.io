@@ -222,6 +222,18 @@ h6 { font-size: 16px;}
     padding-bottom: 50px;
 }
 
+#HDIcert_pic{                                      /*Certification pic dimensions*/
+    display:block;
+    margin: 0 auto;
+    height: 300px;
+    width: 500px;
+    object-fit: contain;
+    pointer-events: none;
+    user-select: none;
+    padding-bottom: 50px;
+}
+
+
 #theme-options-wrapper{
     display: flex;
     justify-content: center;
@@ -384,15 +396,15 @@ h6 { font-size: 16px;}
 /*--------------Certifications-Begin--------------*/
 .certif-post{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
-        'certif-post certif-post'
+        'certif-post certif-post certif-post'
     ;
 }
 
 .certif-post{
     grid-area: certif-post;
-    padding-top: 60px;
+    padding-top: 50px;
     padding-bottom: 30px;
     cursor: pointer;
 }
